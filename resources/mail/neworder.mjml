@@ -1,0 +1,47 @@
+<mjml>
+  <mj-head>
+    <mj-style>      
+      a{ color: #acb8dc !important; }
+      a:hover{ color: #fff !important; }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#FFF">
+    <mj-section padding-bottom="20px" padding-top="20px">
+      <mj-column width="100%">
+        <mj-image src="{{ asset('images/logo_kopatik_mail.png') }}" href="https://shopping.fgainza.fr" target="_blank" alt="" align="center" border="none" width="300px" padding-left="0px" padding-right="0px" padding-bottom="10px" padding-top="10px"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#6E7783" padding-bottom="5px" padding-top="0">
+      <mj-column width="100%">
+        <mj-text align="center" color="#FFF" font-size="20px" font-family="Helvetica" padding-left="25px" padding-right="25px" padding-top="28px">Nouvelle commande
+        </mj-text>
+        <mj-text align="center" color="#FFF" font-size="20px" font-family="Helvetica" padding-left="25px" padding-right="25px" padding-bottom="28px" padding-top="10px">du client {{ ucfirst($user->firstname) .' '. strtoupper($user->name) }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#6E7783" padding-bottom="5px" padding-top="0">
+      <mj-column width="100%">
+        <mj-divider border-color="#ffffff" border-width="2px" border-style="solid" padding-left="20px" padding-right="20px" padding-bottom="0px" padding-top="0"></mj-divider>
+        <mj-text align="center" color="#FFF" font-size="20px" font-family="Helvetica" padding-left="25px" padding-right="25px" padding-bottom="20px" padding-top="28px">Détails de la commande
+        </mj-text>        
+         <mj-text color="#FFF" font-size="18px" font-family="Helvetica" padding-left="25px" padding-right="25px" padding-top="28px">Référence : {{ $order->reference }}        
+          </mj-text>
+        <mj-text color="#FFF" font-size="18px" font-family="Helvetica" padding-left="25px" padding-right="25px">
+          Date : {{ $order->created_at->format('d/m/Y') }}
+          </mj-text>
+        <mj-text color="#FFF" font-size="18px" font-family="Helvetica" padding-left="25px" padding-right="25px">
+          Paiement : {{ $order->payment_text }}
+          </mj-text>
+        <mj-text color="#FFF" font-size="18px" font-family="Helvetica" padding-left="25px" padding-right="25px" padding-bottom="30px">
+         Total : {{ number_format($order->totalOrder, 2, ',', ' ') }} € 
+          </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#6E7783" padding-bottom="0px" padding-top="0">
+      <mj-column width="100%">
+        <mj-divider border-color="#FFF" border-width="2px" border-style="solid" padding-left="20px" padding-right="20px" padding-bottom="0px" padding-top="0"></mj-divider>
+        <mj-text align="center" color="#FFF" font-size="15px" font-family="Helvetica" padding-left="25px" padding-right="25px" padding-bottom="20px" padding-top="20px"><a href="https://shopping.fgainza.fr" target="_blank">KoPaTiK</a></mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,0 +1,62 @@
+<mjml>
+  <mj-head>
+    <mj-style>      
+      a{ color: #acb8dc !important; }
+      a:hover{ color: #fff !important; }
+      li{ line-height: 20px; }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#FFF">
+    <mj-section padding-bottom="20px" padding-top="20px">
+      <mj-column width="100%">
+        <mj-image src="{{ asset('images/logo_kopatik_mail.png') }}" href="https://shopping.fgainza.fr" target="_blank" alt="" align="center" border="none" width="300px" padding-left="0px" padding-right="0px" padding-bottom="10px" padding-top="10px"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#6E7783" padding-bottom="0px" padding-top="0">
+      <mj-column width="100%">
+        <mj-text line-height="20px" align="center" font-size="18px" color="#9dc3c1" font-family="Ubuntu, Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px" padding-bottom="18px" padding-top="28px">Bonjour
+          <span style="font-size:20px;"> {{ ucfirst($user->firstname) }} {{ strtoupper($user->name) }}</span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#6E7783" padding-bottom="5px" padding-top="0">
+      <mj-column width="100%">
+        <mj-divider border-color="#ffffff" border-width="2px" border-style="solid" padding-left="20px" padding-right="20px" padding-bottom="0px" padding-top="0"></mj-divider>
+        <mj-text line-height="20px" align="center" color="#FFF" font-size="13px" font-family="Helvetica" padding-left="25px" padding-right="25px" padding-bottom="28px" padding-top="28px"><span style="font-size:20px; font-weight:bold">Merci d'avoir créé votre compte client</span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#6E7783" padding-bottom="5px" padding-top="0">
+      <mj-column width="100%">
+        <mj-divider border-color="#ffffff" border-width="2px" border-style="solid" padding-left="20px" padding-right="20px" padding-bottom="0px" padding-top="0"></mj-divider>
+        <mj-text line-height="20px" align="center" color="#FFF" font-size="13px" font-family="Helvetica" padding-left="25px" padding-right="25px" padding-bottom="20px" padding-top="28px"><span style="font-size:18px; font-weight:bold">Votre code d'accès</span>
+        </mj-text>
+        <mj-text line-height="20px" align="center" color="#FFF" font-size="13px" font-family="Helvetica" padding-left="25px" padding-right="25px" padding-bottom="28px"><span style="font-size:18px; font-weight:bold">Adresse e-mail : <mj-text color="#FFF">{{ $user->email }}<mj-text></span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#77aaad" padding-bottom="15px">
+      <mj-column>
+        <mj-text line-height="20px" align="center" color="#FFF" font-size="17px" font-family="Ubuntu, Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px" padding-bottom="0px"><strong>Conseils de sécurité</strong></mj-text>
+        <mj-text color="#FFF" font-size="15px" font-family="Helvetica" padding-left="25px" padding-right="25px" padding-bottom="20px" padding-top="10px">
+          <ul>
+            <li>
+              Vos informations de compte doivent rester confidentielles.
+            </li>
+            <li>Ne les communiquez jamais à qui que ce soit.</li>
+            <li>Changez votre mot de passe régulièrement.</li>
+            <li>
+              Si vous pensez que quelqu'un utilise votre compte illégalement, veuillez nous prévenir immédiatement.
+            </li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#6E7783" padding-bottom="0px" padding-top="0">
+      <mj-column width="100%">
+        <mj-text line-height="20px" align="center" color="#FFF" font-size="15px" font-family="Helvetica" padding-left="25px" padding-right="25px" padding-bottom="20px" padding-top="20px" line-height="20px">Vous pouvez dès à présent passer commande sur notre boutique <a href="https://shopping.fgainza.fr" target="_blank">KoPaTiK</a>.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

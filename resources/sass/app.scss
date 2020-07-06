@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap');
+
+@font-face {
+  font-family: 'candelabold';
+  src: url('../fonts/candelabold-webfont.woff2') format('woff2'),
+       url('../fonts/candelabold-webfont.woff') format('woff'),
+       url('../fonts/candelabold-webfont.ttf') format('truetype'),
+       url('../fonts/candelabold-webfont.svg#candelabold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Animate
+@import "animate.scss";
+// Materialize
+@import "materialize-css/materialize.scss";
+// Spacing Perso
+@import "spacing-perso.scss";
+// Sizing Perso
+@import "sizing-perso.scss";
+
+
+main { 
+  padding-top: 40px; 
+}
+
+body {
+  background-color: #f1f1ff;
+}
+
+.fz-110{font-size: 110%;}
+.boold{font-weight: bold;}
+
+[type="radio"] + span::before, [type="radio"] + span::after {
+  left: 10px !important;
+}
+.m-y-auto{
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+.align-bas{
+  vertical-align: -moz-middle-with-baseline;
+}
+.nowrape{
+  white-space: nowrap !important;
+}
+
+.font-rum{
+  font-family: 'candelabold', sans-serif;
+  font-size: 130%;
+  text-transform: uppercase;
+}
+
+.font-rum2{
+  font-family: 'candelabold', sans-serif;
+  font-size: 120%;
+  text-transform: uppercase;
+}
+
+.interligne{
+  height: 1rem;
+}
+
+.selec{
+  background-color: #0ca7af !important;
+  color: #fcfcfc !important;
+}
+
+.page-footer {
+  margin-top: 80px;
+}
+
+.cards-container {
+  .card {
+    display: inline-block;
+    overflow: visible;
+    width: 100%;
+  }
+}
+
+#loader {
+  margin: 40px;
+}
+.loader {
+  margin: auto;
+  border: 16px solid #e3e3e3;
+  border-radius: 50%;
+  border-top: 16px solid #008695;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.btn-large {
+  margin-bottom: 30px;
+}
+#account a {
+  width: 100%;
+}
+.card-category {
+  font-size: 80% !important;
+  color: lightslategray;
+  padding-right: 3%;
+}
+
+.fz-85 {
+  font-size: 85% !important;
+  color: rgba(0, 0, 0, 0.8) !important
+}
+
+.italic {
+  font-style: italic;
+}
+
+.height-30 {
+  max-height: 20px !important;
+  line-height: 20px !important;
+}
+
+.height-35 {
+  max-height: 35px !important;
+  line-height: 35px !important;
+}
+
+a.link-perso{
+  color: black !important;
+  text-decoration: none !important;
+}
+a.link-perso:hover{
+  color: #383838 !important;
+  text-decoration: none !important;
+}
+
+.pad16px{
+  padding-left: 16px !important;
+}
+
+.sidenav li .divider:hover {
+  background-color: rgba(250, 250, 0, 0.05) !important;
+}
+
+
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+.fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+
+/**
+#######################################
+|           PAYPAL BUTTON             |
+#######################################
+**/
+.box {
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  }
+
+  .paypal {
+  &-logo {
+    font-family: Verdana, Tahoma;
+    font-weight: bold;
+    font-size: 26px;
+
+    i:first-child {
+      color: #253b80;
+    }
+
+    i:last-child {
+      color: #179bd7;
+    }
+  }
+
+  &-button {
+    padding: 15px 30px;
+    border: 1px solid #FF9933;
+    border-radius: 5px;
+    background-image: linear-gradient(#FFF0A8, #F9B421);
+    margin: 0 auto;
+    display: block;
+    min-width: 138px;
+    position: relative;
+    
+    &-title {
+      font-size: 14px;
+      color: #505050;
+      vertical-align: baseline;
+      text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+    }
+    
+    .paypal-logo {
+      display: inline-block;
+      text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+      font-size: 20px;
+    }
+  }
+}
+.paypal-button{
+  cursor: pointer;
+}
+.paypal-button:hover{
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+
+
+// Materialize Responsive
+
+@media only screen and (max-width: 600px) {
+  .cards-container {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .cards-container {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .cards-container {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+  .w-notif {
+    min-width: 20%;
+    max-width: 40%;
+  }
+}
+@media only screen and (max-width: 992px){
+  .w-notif {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .cards-container {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+  }
+}
