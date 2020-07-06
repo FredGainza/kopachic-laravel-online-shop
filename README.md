@@ -33,7 +33,7 @@ pwd: 12345678
 * Mailing system
 * Statistics and maintenance systems
 
-## What you need
+## Requirement
 
 PHP 7.4 minimum
 
