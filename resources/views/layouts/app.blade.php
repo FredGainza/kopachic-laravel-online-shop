@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
-
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
@@ -43,12 +40,7 @@
   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
     @csrf
   </form>
-  {{-- @if(auth()->logout())
-    @php
-      setcookie('bienvenue', '', time()-3600, '/', '', false, false);
-      setcookie('notif', '', time()-3600, '/', '', false, false);
-    @endphp
-  @endif --}}
+
   <nav>
     <div class="nav-wrapper">
       <a href="{{ route('home') }}" class="brand-logo mt-1 ml-3"><img src="/images/logo_kopatik.png" height="65px" alt="Logo"></a>

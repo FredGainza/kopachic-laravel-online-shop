@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Range;
+use App\Models\{ Range, Country };
 
 class RangeController extends Controller
 {
@@ -14,7 +14,7 @@ class RangeController extends Controller
         return view('back.ranges.edit', compact('ranges'));
     }
 
-    public function update()
+    public function update(Request $request)
     {
         $data = $request->except('_method', '_token');
         $ranges = Range::all();

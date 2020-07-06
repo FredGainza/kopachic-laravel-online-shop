@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
 <div class="container">
   <form id="form" action="{{ route('commandes.store') }}" method="POST">
@@ -15,7 +16,7 @@
         @include('command.partials.addresses', ['name' => 'facturation'])
         <div class="row">
           <div class="col s12">
-            <a href="#" class="btn" style="width: 100%"><i class="material-icons left">location_on</i>Gérer mes Adresses</a>
+            <a href="{{route('adresses.index')}}" class="btn" style="width: 100%"><i class="material-icons left">location_on</i>Gérer mes Adresses</a>
           </div>
         </div>
         <div class="row">

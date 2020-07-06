@@ -9,7 +9,12 @@
       <div class="col m12 l6">
         <div class="card">                          
           <div class="card-content address">
-            <p><label><input name="{{ $name }}" value="{{ $address->id }}" type="radio" @if($loop->first) checked @endif><span></span></label></p>
+            <p>
+              <label>
+                <input name="{{ $name }}" value="{{ $address->id }}" type="radio" @if($loop->first) checked @endif>
+                @if($addresses->count() > 1)<span></span>@endif
+              </label>
+            </p>
             @include('account.addresses.partials.address')
           </div>
         </div>

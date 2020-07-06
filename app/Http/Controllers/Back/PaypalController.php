@@ -111,10 +111,6 @@ class PayPalController extends Controller
 
             return redirect()->route('order.paypal', $order_id);
         }
-
-        // return redirect()->back()->with([
-        //     'message' => $response->getMessage(),
-        // ]);
     }
 
     /**

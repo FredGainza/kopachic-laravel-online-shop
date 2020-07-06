@@ -1,34 +1,27 @@
 @extends('layouts.app')
 @section('content')
-{{-- <div class="container"> --}}
 
-@if($shop->home_infos && (!isset($_COOKIE['notif']))){
+
+@if($shop->home_infos && (!isset($_COOKIE['notif'])))
   <div class="annonce-container right w-notif m-r-2 m-t-n2-5">     
     <div class="card">
-      {{-- <div class="card-content"> --}}
-      {{-- <span class="card-title center-align">{{ $shop->home }}</span>
-        <br> --}}
-        <ul class="collapsible">
-          <li classe="px-1">
-            <div class="annonce">
-              <div class="collapsible-header head-annonce red-text text-darken-1"><i class="material-icons">info</i>Informations importantes</div>
-            </div>
-            <div class="collapsible-body informations">
-              <ul>
-                <li>{{ $shop->home_infos }}</li>
-              </ul>
-            </div>
-          </li>
-          {{-- <li>
-            <div class="collapsible-header"><i class="material-icons">local_shipping</i>Frais d'expédition</div>
-            <div class="collapsible-body informations">
-              <ul>
-                <li>{{ $shop->home_shipping }}</li>
-              </ul>
-            </div>
-          </li> --}}
-        </ul>
-      {{-- </div> --}}
+      <ul class="collapsible">
+        <li classe="px-1">
+          <div class="annonce">
+            <div class="collapsible-header head-annonce red-text text-darken-1"><i class="material-icons">info</i>Informations importantes</div>
+          </div>
+          <div class="collapsible-body informations">
+            <ul>
+              @php 
+                $info=explode("\r\n\r\n", $shop->home_infos);
+              @endphp
+              @foreach($info as $li)
+                <li>{{ ' '.$li }}<br></li>
+              @endforeach
+            </ul>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 @endif

@@ -102,18 +102,6 @@
           </div>
         </div> 
 
-        {{-- @if($order->state->slug === 'paiement_ok' &&  (session('transacId') !== null))
-        <div class="row">
-          <span class="green-text bold">Paiement effectué</span>
-          <div class="col s6">
-            Transaction ID : 
-          </div>
-          <div class="col s6">
-            <strong>{{ session('transacId') }}</strong>
-          </div>
-        </div>
-        @endif --}}
-
       @elseif(isset($order) && $order->state->slug === 'annule')
         <div class="row center-align">
           <h5><strong class="red-text">Commande {{ $order->reference }} annulée.</strong></h5>

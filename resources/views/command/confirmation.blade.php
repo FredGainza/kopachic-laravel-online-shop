@@ -32,15 +32,6 @@
   </style>
 @endsection
 
-{{-- @section('head-scripts')
-  @if($order->state->slug === 'paypal')
-      <script
-          src="https://www.paypal.com/sdk/js?client-id=AdNaGDzrh-dwvQtxN_0L_XtmoPR7T1Vdt2wn2ersfqu_bbqzJpVF2t6BhMt6p7zN0eMiNXC2EFYCkZvK&currency=EUR&locale=fr_FR"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
-      </script>
-  @endif
-@endsection --}}
-
-
 @section('content')
 <div class="container">
   <ul class="collection with-header">

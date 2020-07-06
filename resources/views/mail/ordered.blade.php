@@ -131,7 +131,7 @@
                         <tbody>
                           <tr>
                             <td style="width:300px;">
-                              <a href="https://kopachic.fgainza.fr" target="_blank">
+                              <a href="https://shopping.fgainza.fr" target="_blank">
                                 <img alt="" height="auto" src="{{ asset('images/logo_kopatik_mail.png') }}" style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="300" />
                               </a>
                             </td>
@@ -633,7 +633,7 @@
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tr>
                     <td align="center" style="font-size:0px;padding:10px 25px;padding-top:20px;padding-right:25px;padding-bottom:20px;padding-left:25px;word-break:break-word;">
-                      <div style="font-family:Helvetica;font-size:15px;line-height:20px;text-align:center;color:#555555;"><a href="https://kopachic.fgainza.fr" target="_blank">KoPaTiK</a></div>
+                      <div style="font-family:Helvetica;font-size:15px;line-height:20px;text-align:center;color:#555555;"><a href="https://shopping.fgainza.fr" target="_blank">KoPaTiK</a></div>
                     </td>
                   </tr>
                 </table>
