@@ -7,13 +7,9 @@
 
 ## Demo
 
-***
-
 [https://kopachic.fgainza.fr](https://kopachic.fgainza.fr)
 
 ## Features
-
-***
 
 **Front-end** :
 
@@ -31,13 +27,9 @@
 
 ## What you need
 
-***
-
 PHP 7.4 minimum
 
 ## Install
-
-***
 
 Like any laravel project
 
