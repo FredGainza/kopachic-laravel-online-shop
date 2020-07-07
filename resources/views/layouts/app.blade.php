@@ -204,7 +204,7 @@
           <h5 class="white-text">Informations</h5>
           <ul>
             @foreach ($pages as $page)
-              <li><a class="grey-text text-lighten-3" href="{{ route('page', $page->slug) }}">{{ $page->title }}</a></li> 
+              <li class="m-b-0-35"><a class="grey-text text-lighten-3" href="{{ route('page', $page->slug) }}">{{ $page->title }}</a></li> 
             @endforeach
           </ul>
         </div>
