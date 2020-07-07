@@ -48,6 +48,11 @@
         margin: 0;
     }
 
+    .style-card{
+      background-color: #34495e;
+      color: #ecf0f1;
+    }
+
     .fz-90 {
       font-size: 90% !important;
     }

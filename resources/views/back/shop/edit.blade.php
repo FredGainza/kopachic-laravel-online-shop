@@ -19,7 +19,7 @@
               @method('PUT')
               @csrf
               <div class="card">
-                <h5 class="card-header">Identité</h5>
+                <h5 class="card-header style-card">Identité</h5>
                 <div class="card-body">
           
                   <x-inputbs4
@@ -56,7 +56,7 @@
                 </div>
               </div>
               <div class="card">
-                <h5 class="card-header">Banque</h5>
+                <h5 class="card-header style-card">Banque</h5>
                 <div class="card-body">
           
                   <x-inputbs4
@@ -92,7 +92,7 @@
                 </div>
               </div>
               <div class="card">
-                <h5 class="card-header">Accueil</h5>
+                <h5 class="card-header style-card">Accueil</h5>
                 <div class="card-body">
           
                   <x-inputbs4
@@ -114,7 +114,7 @@
                 </div>
               </div>
               <div class="card">
-                <h5 class="card-header">Facturation</h5>
+                <h5 class="card-header style-card">Facturation</h5>
                 <div class="card-body">
                   <x-checkbox
                     name="invoice"
@@ -125,7 +125,7 @@
                 </div>
               </div>
               <div class="card">
-                <h5 class="card-header">Modes de paiement acceptés</h5>
+                <h5 class="card-header style-card">Modes de paiement acceptés</h5>
                 <div class="card-body">
                   <x-checkbox
                     name="card"
