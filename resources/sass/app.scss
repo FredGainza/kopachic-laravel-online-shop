@@ -71,6 +71,10 @@ body {
   margin-top: 80px;
 }
 
+i.left{
+  margin-right: .5rem !important;
+}
+
 .cards-container {
   .card {
     display: inline-block;
@@ -79,7 +83,7 @@ body {
   }
 }
 
-.card .card-content {
+.card .card-content.axx {
   padding: 0 24px 12px 24px !important;
 }
 

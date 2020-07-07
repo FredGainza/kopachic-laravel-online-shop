@@ -27,7 +27,11 @@
                 <td>{{ $order->payment_text }}</td>
                 <td><span class="badge new {{ $order->state->color }}" data-badge-caption="{{ $order->state->name }}"></span></td>
                 <td><a href="{{ route('commandes.show', $order->id) }}" class="waves-effect waves-light btn-small">Détails</a></td>
-                <td><a href="{{ route('invoice', $order->id) }}" class="waves-effect waves-light btn-small">Télécharger</a></td>
+                @if($order->state->name == 'Paiement accepté')
+                  <td><a href="{{ route('invoice', $order->id) }}" class="waves-effect waves-light btn-small">Télécharger</a></td>
+                @else 
+                  <td class="center-align"></td>
+                @endif
               </tr>
               @endforeach
             </tbody>

@@ -16,7 +16,7 @@
             <form action="{{ route('read', 'orders') }}" method="POST">
                 @csrf
                 @method('PUT')
-                <button type="submit" class="btn btn-danger btn-block text-warning">Purger</button>
+                <button type="submit" class="btn btn-danger btn-block btn-menu">Purger</button>
               </form>
         </div>
 

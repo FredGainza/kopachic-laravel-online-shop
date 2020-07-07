@@ -6518,12 +6518,12 @@ i {
 
 i.left {
   float: left;
-  margin-right: 15px;
+  margin-right: .5rem;
 }
 
 i.right {
   float: right;
-  margin-left: 15px;
+  margin-left: .5rem;
 }
 
 i.tiny {
@@ -19032,7 +19032,7 @@ body {
   width: 100%;
 }
 
-.card .card-content {
+.card .card-content.axx {
   padding: 0 24px 12px 24px !important;
 }
 

@@ -8,7 +8,7 @@
     @foreach($addresses as $address)
       <div class="col s12 m6 l4">
         <div class="card" {{($user->principale == $address->id ? ' style=background-color:#f7fffe;color:#3a3a3a;' : '') }}>
-          <div class="card-content address {{($user->principale == $address->id ? ' p-t-0' : '') }}">
+          <div class="card-content address axx {{($user->principale == $address->id ? ' p-t-0' : '') }}">
             @include('account.addresses.partials.address')
           </div>
           <div class="card-action">
@@ -21,11 +21,11 @@
   </div>
   <div class="row">
     @if(url()->previous() === route('commandes.create'))
-      <a class="waves-effect waves-light btn" href="{{ route('commandes.create') }}"> <i class="material-icons left">chevron_left</i>Retour à ma commande</a>      
+      <a class="waves-effect waves-light btn m-l-0-75" href="{{ route('commandes.create') }}"> <i class="material-icons left">chevron_left</i>Retour à ma commande</a>      
     @else
-      <a class="waves-effect waves-light btn" href="{{ route('account') }}"> <i class="material-icons left">chevron_left</i>Retour à mon compte</a>
+      <a class="waves-effect waves-light btn m-l-0-75" href="{{ route('account') }}"> <i class="material-icons left">chevron_left</i>Retour à mon compte</a>
     @endif
-    <a class="waves-effect waves-light btn" href="{{ route('adresses.create') }}">Créer une adresse</a>
+    <a class="waves-effect waves-light btn m-l-1" href="{{ route('adresses.create') }}">Créer une adresse</a>
   </div>
 </div>
 @endsection
