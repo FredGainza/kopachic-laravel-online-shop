@@ -1,4 +1,4 @@
-@if(isset($user) && $user->addresses()->count() >= 1 && $user->principale == $address->id)
+@if(isset($user) && $user->addresses()->count() >= 1 && $user->principale == $address->id && url()->current() != "https://kopachic.fgainza.fr/commandes/creation")
     <ul class="list-unstyled m-x-0">
         <li class="center-align card-panel p-y-0-5 m-x-n1-6 teal fz-110 lighten-2 white-text"><strong> Adresse principale</strong></li>
 @else 

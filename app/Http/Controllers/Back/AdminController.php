@@ -17,6 +17,7 @@ class AdminController extends Controller
     public function index(Request $request) 
     { 
         $notifications = $request->user()->unreadNotifications()->get();
+        // dd($notifications);
         $newUsers = 0;
         $newOrders = 0;
         foreach($notifications as $notification) {

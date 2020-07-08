@@ -28,13 +28,14 @@ class OrderController extends Controller
             return redirect()->route('adresses.create')->with('message', 'Vous devez créer au moins une adresse pour pouvoir passer une commande.');
         }
 
+        $user = $request->user();
         $country_id = $addresses->first()->country_id;
         $shipping = $ship->compute($country_id);
         $content = Cart::getContent();
         $total = Cart::getTotal();
         $tax = Country::findOrFail($country_id)->tax;
         
-        return view('command.index', compact('addresses', 'shipping', 'content', 'total', 'tax'));
+        return view('command.index', compact('user', 'addresses', 'shipping', 'content', 'total', 'tax'));
     }
 
     /**

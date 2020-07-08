@@ -13,7 +13,9 @@
       <div id="wrapper">
       <li class="collection-item">
         <h5>Adresse de facturation <span id="solo">et de livraison</span></h5>
-        @include('command.partials.addresses', ['name' => 'facturation'])
+        <form action="" id="formFac">
+          @include('command.partials.addresses', ['name' => 'facturation'])
+        </form>
         <div class="row">
           <div class="col s12">
             <a href="{{route('adresses.index')}}" class="btn" style="width: 100%"><i class="material-icons left">location_on</i>Gérer mes Adresses</a>
@@ -145,49 +147,6 @@
 @endsection
 @section('javascript')
   <script>
-    const principale = <?= $user->principale; ?>;
-    const inputsFac = document.querySelectorAll('input[type=radio][name=facturation]');
-    
-    for (var i = 0; i < inputsFac.length; i++) {
-      if(inputsFac[i].value==principale){
-        const test = inputsFac[i];
-        test.checked = true;
-        test.parentNode.parentNode.parentNode.style.backgroundColor = '#f7fffe';
-      }
-    };
-
-    for (var i = 0; i < inputsFac.length; i++) {
-      inputsFac[i].addEventListener('input', function () {
-        if(this.checked == true){
-          this.parentNode.parentNode.parentNode.style.backgroundColor = '#f7fffe';
-        }else if(this.checked == false){
-          this.parentNode.parentNode.parentNode.style.backgroundColor = '#ffffff';
-        }
-      });
-    };
-
-
-    const inputsLiv = document.querySelectorAll('input[type=radio][name=livraison]');
-    for (var i = 0; i < inputsLiv.length; i++) {
-      if(inputsLiv[i].value == principale){
-        const test2 = inputsLiv[i];
-        test2.checked = true;
-        test2.parentNode.parentNode.parentNode.style.backgroundColor = '#f7fffe';
-      }
-    }
-
-    
-    for (var i = 0; i < inputsLiv.length; i++) {
-      inputsLiv[i].addEventListener('input', function () {
-        if(this.checked == true){
-          this.parentNode.parentNode.parentNode.style.backgroundColor = '#f7fffe';
-        }else if(this.checked == false){
-          this.parentNode.parentNode.parentNode.style.backgroundColor = '#ffffff';
-        }
-      });
-    };
-
-
     const changePayment = () => {
       document.querySelectorAll('.payment').forEach(payment => {
         const list = payment.parentNode.parentNode.nextElementSibling.classList;
@@ -219,40 +178,35 @@
       document.querySelector('#loader').classList.add('hide');
       document.querySelector('#wrapper').classList.remove('hide');      
     };
-
-
+    // const inputsFac = document.querySelectorAll('input[type=radio][name=facturation]');
     // const factChecked = document.querySelector('input[type=radio][name=facturation]:checked');
     // const livChecked = document.querySelector('input[type=radio][name=livraison]:checked');
 
     // factChecked.parentNode.parentNode.parentNode.style.backgroundColor = '#f7fffe';
     // livChecked.parentNode.parentNode.parentNode.style.backgroundColor = '#f7fffe';
 
-    for (var i = 0; i < inputsFac.length; i++) {
-      console.log(inputsFac[0]);
-      // console.log(inputsFac[1]);
-      inputsFac[i].addEventListener('click', function () {  
-        if (this.checked == true) {
-          console.log(inputsFac);
-          console.log(i);
-          this.parentNode.parentNode.parentNode.style.backgroundColor = '#f7fffe';
-          // for (var j = 0; j < inputsFac.length; j++) {
-          //   if (j != i){
-          //     inputsFac[j].parentNode.parentNode.parentNode.style.backgroundColor = '#fff';
-          //   }
-          // }
-        }else{
-          this.parentNode.parentNode.parentNode.style.backgroundColor = '#fff';
-        }
-      })
-    };
-
+    // for (var i = 0; i < inputsFac.length; i++) {
+    //   console.log(inputsFac[0]);
+    //   // console.log(inputsFac[1]);
+    //   inputsFac[i].addEventListener('click', function () {  
+    //     if (this.checked == true) {
+    //       // console.log(inputsFac);
+    //       // console.log(i);
+    //       this.parentNode.parentNode.parentNode.style.backgroundColor = '#f7fffe';
+    //       // for (var j = 0; j < inputsFac.length; j++) {
+    //       //   if (j != i){
+    //       //     inputsFac[j].parentNode.parentNode.parentNode.style.backgroundColor = '#fff';
+    //       //   }
+    //       // }
+    //     }else{
+    //       this.parentNode.parentNode.parentNode.style.backgroundColor = '#fff';
+    //     }
+    //   })
+    // };
 
     document.addEventListener('DOMContentLoaded', () => {
-      
       document.querySelector('#different').checked = false;
-      
       document.querySelector('#ok').checked = false;
-      
       document.querySelector('#different').addEventListener('change', () => {
         document.querySelector('#liLivraison').classList.toggle('hide');
         document.querySelector('#solo').classList.toggle('hide');
@@ -267,6 +221,7 @@
       document.querySelectorAll('input[type=radio][name=facturation]').forEach(input => {
         input.addEventListener('change', () => getDetails());
       });
+      console.log(getDetails());
       document.querySelectorAll('input[type=radio][name=livraison]').forEach(input => {
         input.addEventListener('change', () => getDetails());
       });
@@ -299,5 +254,6 @@
       changePayment();
       getDetails();
     });
+
   </script>
 @endsection

@@ -8,11 +8,11 @@
     @foreach($addresses as $address)
       <div class="col m12 l6">
         <div class="card">                          
-          <div class="card-content address">
+          <div class="card-content address @if($addresses->count() == 1) p-t-0 @else p-y-0-75 @endif">
             <p>
               <label>
-                <input name="{{ $name }}" value="{{ $address->id }}" type="radio" @if($loop->first) checked @endif>
-                @if($addresses->count() > 1)<span></span>@endif
+                <input name="{{ $name }}" value="{{ $address->id }}" type="radio">
+                @if($addresses->count() > 1)<span>Choisir cette adresse</span>@endif
               </label>
             </p>
             @include('account.addresses.partials.address')
