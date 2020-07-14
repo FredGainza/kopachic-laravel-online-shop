@@ -40,7 +40,7 @@
 
 @section('content')
 <div class="container">
-  <h2>Détails de ma commande</h2>
+  <h2 class="titre">Détails de ma commande</h2>
   <div class="row">
     <div class="col s12">
       <div class="card">

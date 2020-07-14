@@ -1,27 +1,29 @@
 <div class="row">
     @if(isset($newcom))
     {{-- {{dd($newcom)}}; --}}
-        <div class="offset-1 col-1">
-            <button class="btn btn-block btn-dark " onclick="history.back()">Retour</button>
+        <div class="col-6 col-sm-2 col-xl-1 order-1 m-t-n2">
+            <button class="btn btn-block btn-dark btn-menu" onclick="history.back()">Retour</button>
         </div>
-        <div class=" offset-1 col-6">
-                <div class="text-center">
-                    <button class="btn btn-block btn-info">
-                    {{ $newcom->count() }}
+        <div class="col-12 col-sm-7 col-lg-6 mx-auto order-3 order-sm-2 mt-3 mt-sm-0">
+            <div class="text-center">
+                <button class="btn btn-block btn-menu btn-outline-info text-dark"">
+                    <span class="fz-110">
+                        {{ $newcom->count() }}
                         @if($newcom->count() === 1) nouvelle commande @else nouvelles commandes @endif
-                    </button>
+                    </span>
+                </button>
             </div>
         </div>
-        <div class="offset-1 col-1">
+        <div class="col-6 col-sm-2 col-xl-1 order-2 order-sm-3">
             <form action="{{ route('read', 'orders') }}" method="POST">
                 @csrf
                 @method('PUT')
                 <button type="submit" class="btn btn-danger btn-block btn-menu">Purger</button>
-              </form>
+            </form>
         </div>
 
 
-        <table class="table table-bordered table-hover table-sm mt-5" id="orders-table">
+        <table class="table table-bordered table-hover table-sm mt-5 order-4" id="orders-table">
             <thead>
                 <tr>
                     <th title="Id">Id</th>

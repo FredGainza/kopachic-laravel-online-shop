@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-  <h2>Historique de mes commandes</h2>
+  <h2 class="titre">Historique de mes commandes</h2>
   <div class="row">
     <div class="col s12">
       <div class="card">

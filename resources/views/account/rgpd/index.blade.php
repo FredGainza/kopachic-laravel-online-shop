@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-  <h2>RGPD</h2>
+  <h2 class="titre">RGPD</h2>
   <div class="row">
     <div class="card">
       <div class="card-content">

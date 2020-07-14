@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-  <h2>Nouvelle adresse</h2>
+  <h2 class="titre">Nouvelle adresse</h2>
   @if(session()->has('message'))
     <h5 class="center-align blue-text">{{ session('message') }}</h5>
     <br>

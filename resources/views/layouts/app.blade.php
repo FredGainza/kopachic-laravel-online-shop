@@ -26,13 +26,53 @@
         min-height: 100vh;
         flex-direction: column;
       }
-
+      h2.titre{
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
       main {
         flex: 1 0 auto;
+        padding-top: .2rem !important; 
       }
+
       .bg-collap{
         background-color: #57606f !important;
         color: #f1f2f6 !important;
+      }
+      a.mystyle{
+        color: #fff;
+      }
+      a.mystyle:hover{
+        color: #d0d9d7;
+        text-decoration: underline;
+      }
+      .m-small{
+        margin-bottom: .75rem;
+      }
+      .pos-btn{
+        text-align: center;
+        width: 93%;
+      }
+
+      @media screen and (min-width: 601px){
+        .pos-btn{
+          text-align: left;
+          width: auto;
+        }
+        h2.titre{
+          font-size: 2.5rem;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
+      }
+
+      @media screen and (min-width: 993px){
+        h2.titre{
+          font-size: 3rem;
+          margin-top: 2.5rem;
+          margin-bottom: 2.5rem;
+        }
       }
     </style>
 </head>
@@ -188,14 +228,19 @@
   </main>
 
   <footer class="page-footer">
-    <div class="container">
+    <div class="container center-on-small-only">
       <div class="row">
         <div class="col m5 s12">
           <h5 class="white-text">{{ $shop->name }}</h5>
           <ul>
-            <li class="grey-text text-lighten-3 p-b-1">{{ $shop->address }}</li>
-            <li class="grey-text text-lighten-3">Appelez-nous : {{ $shop->phone }}</li>
-            <li class="grey-text text-lighten-3">Écrivez-nous : {{ $shop->email }}</li>
+            @php
+              $adress=explode("\r\n\r\n", $shop->address);
+            @endphp
+            @foreach($adress as $li)
+              <li>{{ ' '.$li }}<br></li>
+            @endforeach
+            <li class="grey-text text-lighten-3 p-t-1 nowrape">Tel : <a class="mystyle" href="tel:{{ $shop->phone }}">{{ $shop->phone }}</a></li>
+            <li class="grey-text text-lighten-3">Email : <a class="mystyle" href="mailto:{{ $shop->email }}">{{ $shop->email }}</a></li>
             <br>
             <li><img src="/images/paiement.png" alt="Modes de paiement" width="250px"></li>
           </ul>
@@ -204,7 +249,7 @@
           <h5 class="white-text">Informations</h5>
           <ul>
             @foreach ($pages as $page)
-              <li class="m-b-0-35"><a class="grey-text text-lighten-3" href="{{ route('page', $page->slug) }}">{{ $page->title }}</a></li> 
+              <li class="m-b-0-45"><a class="grey-text text-lighten-3" href="{{ route('page', $page->slug) }}">{{ $page->title }}</a></li> 
             @endforeach
           </ul>
         </div>
@@ -219,6 +264,7 @@
     </div>
   </footer>
   <script>
+    var largeur = window.innerWidth;
 
     var elem = document.querySelector('.collapsible.expandable');
     var bodyel = document.querySelectorAll('.collapsible-body');

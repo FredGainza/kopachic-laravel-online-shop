@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-  <h2>Mes adresses</h2>
+  <h2 class="titre">Mes adresses</h2>
   <div class="row">
     @foreach($addresses as $address)
       <div class="col s12 m6 l4">
@@ -21,11 +21,11 @@
   </div>
   <div class="row">
     @if(url()->previous() === route('commandes.create'))
-      <a class="waves-effect waves-light btn m-l-0-75" href="{{ route('commandes.create') }}"> <i class="material-icons left">chevron_left</i>Retour à ma commande</a>      
+      <a class="waves-effect waves-light btn m-l-1 pos-btn left m-small" href="{{ route('commandes.create') }}">Retour à ma commande</a>      
     @else
-      <a class="waves-effect waves-light btn m-l-0-75" href="{{ route('account') }}"> <i class="material-icons left">chevron_left</i>Retour à mon compte</a>
+      <a class="waves-effect waves-light btn m-l-1 pos-btn left m-small" href="{{ route('account') }}">Retour à mon compte</a>
     @endif
-    <a class="waves-effect waves-light btn m-l-1" href="{{ route('adresses.create') }}">Créer une adresse</a>
+    <a class="waves-effect waves-light btn m-l-1 center-on-small-only pos-btn" href="{{ route('adresses.create') }}">Créer une adresse</a>
   </div>
 </div>
 @endsection

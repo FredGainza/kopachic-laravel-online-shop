@@ -5,6 +5,9 @@
     .wshow{
       width: 100% !important;
     }
+    .m-btn-ajout{
+      margin-top: .8rem;
+    }
     @media screen and (min-width: 479px) and (max-width: 600px){
       .wshow{
         width: 45% !important;
@@ -16,6 +19,12 @@
         margin-left: 8% !important;
         margin-right: 0 !important
       }
+      .m-btn-ajout{
+        margin-top: 0;
+      }
+    }
+    .modal .modal-footer{
+      height: auto;
     }
   </style>    
 @endsection
@@ -25,17 +34,16 @@
 
   @if(session()->has('cart'))
     <div class="modal">
-      <div class="modal-content center-align">
+      <div class="modal-content p-b-0-5 center-align">
         <h5>Produit ajouté au panier avec succès</h5>
         <hr>
-        <p>Il y a {{ $cartCount }} @if($cartCount > 1) articles @else article @endif dans votre panier pour un total de <strong>{{ number_format($cartTotal, 2, ',', ' ') }} € TTC</strong> hors frais de port.</p>
+        <p>Il y a {{ $cartCount }} @if($cartCount > 1) articles @else article @endif dans votre panier pour un total de <b>{{ number_format($cartTotal, 2, ',', ' ') }}&nbsp;€&nbsp;TTC</b> hors frais de port.</p>
         <p><em>Vous avez la possibilité de venir chercher vos produits sur place, dans ce cas vous cocherez la case correspondante lors de la confirmation de votre commande et aucun frais de port ne vous sera facturé.</em></p>
-        <div class="modal-footer">     
-          <button class="modal-close btn waves-effect waves-light left" id="continue">
+        <div class="modal-footer center-align">     
+          <button class="modal-close btn waves-effect waves-light pos-btn left" id="continue">
             Continuer mes achats
           </button>
-          <a href="{{ route('panier.index') }}" class="btn waves-effect waves-light">
-            <i class="material-icons left">check</i>
+          <a href="{{ route('panier.index') }}" class="btn waves-effect waves-light center-on-small-only pos-btn p-small">
             Commander          
           </a>
         </div>
@@ -59,7 +67,7 @@
           <input id="quantity" class="wshow align-qte" name="quantity" type="number" value="1" step="1" min="1">
           <label for="quantity">Quantité</label>        
 
-          <button class="btn waves-effect waves-light wshow align-btn nowrape m-t-1" type="submit" id="addcart">Ajouter au panier
+          <button class="btn waves-effect waves-light wshow align-btn nowrape m-btn-ajout" type="submit" id="addcart">Ajouter au panier
             <i class="material-icons left">add_shopping_cart</i>
           </button>
  

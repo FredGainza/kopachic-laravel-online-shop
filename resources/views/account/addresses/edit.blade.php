@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-  <h2>Mettre à jour mon adresse</h2>
+  <h2 class="titre">Mettre à jour mon adresse</h2>
   <div class="row">
     <div class="card">
       <form  method="POST" action="{{ route('adresses.update', $adress->id) }}">

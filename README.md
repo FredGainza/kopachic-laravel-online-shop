@@ -1,4 +1,4 @@
-# KopaChic - Laravel 7 shop online
+# KopaChic - Laravel 7 online shop
 
 <p align="right"><img src="https://img.shields.io/badge/KoPaTiK-Agency-blue"><p align="right">
 

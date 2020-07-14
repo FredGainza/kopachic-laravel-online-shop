@@ -28,6 +28,10 @@
       margin-bottom: 10px !important;
     }
 
+    .wlink{
+      width: 100%
+    }
+
   </style>
 @endsection
 
@@ -78,7 +82,7 @@
         </div>
         <div id="action" class="card-action">
           <p>
-            <a  href="{{ route('home') }}">Continuer mes achats</a>
+            <a href="{{ route('home') }}">Continuer mes achats</a>
             @if($total)
                 <a href="{{ route('commandes.create') }}">Commander</a>
             @endif

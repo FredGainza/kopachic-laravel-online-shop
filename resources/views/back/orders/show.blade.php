@@ -154,7 +154,7 @@
   </div>
   <div class="card">
     <h5 class="card-header">Client : 
-    <a href="{{ route('clients.show', $order->user->id) }}"><span class="badge badge-primary">{{ $order->user->firstname . ' ' . $order->user->name }}</span></a>  
+    <a href="{{ route('clients.show', $order->user->id) }}"><span class="badge badge-dark">{{ $order->user->firstname . ' ' . $order->user->name }}</span></a>  
       <span class="badge badge-secondary">N° {{ $order->user->id }}</span>
     </h5>
     <div class="card-body">
@@ -165,8 +165,8 @@
             <dd class="col-sm-9"><a href="mailto:{{ $order->user->email }}">{{ $order->user->email }}</a></dd>      
             <dt class="col-sm-3 text-truncate">Date d'inscription</dt>
             <dd class="col-sm-9">{{ $order->user->created_at->format('d/m/Y') }}</dd>
-            <dt class="col-sm-3 text-truncate">Commandes validées</dt>
-            <dd class="col-sm-9"><span class="badge badge-primary">{{ $order->user->orders->where('state_id', '>', 5)->count() }}</span></dd>
+            <dt class="col-sm-3 text-truncate ptest">Commandes validées</dt>
+            <dd class="col-sm-9"><span class="badge badge-secondary">{{ $order->user->orders->where('state_id', '>', 5)->count() }}</span></dd>
           </dl>
         </div>
       </div>

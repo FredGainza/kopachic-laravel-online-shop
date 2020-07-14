@@ -22,7 +22,7 @@
             </form>
         </div>
 
-        <table class="table table-bordered table-hover table-sm mt-3 order-4" id="orders-table">
+        <table class="table table-bordered table-hover table-sm mt-3 order-4" id="users-table">
             <thead>
                 <tr>
                     <th title="Id">Id</th>

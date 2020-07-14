@@ -53,6 +53,10 @@
       color: #ecf0f1;
     }
 
+    .ptest{
+      padding-top: .1rem;
+    }
+
     .fz-90 {
       font-size: 90% !important;
     }
