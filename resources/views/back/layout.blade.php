@@ -523,6 +523,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.0.4/js/adminlte.min.js"></script>
+  <script src="/js/chart.min.js"></script>
+  <script src="/js/chartisan_chartjs.js"></script>
   @yield('js')
 </body>
 

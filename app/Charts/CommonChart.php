@@ -1,13 +1,16 @@
 <?php
+
 namespace App\Charts;
 use ConsoleTVs\Charts\BaseChart;
 use Chartisan\PHP\Chartisan;
+
 abstract class CommonChart extends BaseChart
 {
     protected function chartisan($model, $title)
     {
         $year = request()->year;
         $datas = $this->datas($year, $model);
+        dd('gege');
         return Chartisan::build()
             ->labels($datas->pluck('month_name')->toArray())
             ->dataset($title , $datas->pluck('data')->toArray());

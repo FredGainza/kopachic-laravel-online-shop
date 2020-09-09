@@ -38,6 +38,15 @@
         color: #fc8a69;
         text-decoration: underline;
     }
+
+    .link-perso2 {
+        color: #d7d8b8 !important;
+        text-decoration: underline !important;
+    }
+    .link-perso2:hover {
+        color: #adaf6b !important;
+        text-decoration: underline;
+    }
   </style>
 @endsection
 
@@ -58,7 +67,7 @@
                             @else
                                 <span>Votre commande va vous être envoyée</span>
                             @endif  
-                        <p>Vous pouvez télécharger votre facture en cliquant <a class="link-perso" href="{{ route('invoice', $order->id) }}">ici</a></p>
+                        <p>Vous pouvez télécharger votre facture <a class="link-perso2" href="{{ route('invoice', $order->id) }}">en cliquant ici</a>.</p>
                     </div>
                 </div>
             @endif

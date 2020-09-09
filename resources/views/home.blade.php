@@ -3,7 +3,7 @@
 
 
 @if($shop->home_infos && (!isset($_COOKIE['notif'])))
-  <div class="annonce-container right w-notif m-r-2 m-t-n2-5">     
+  <div class="annonce-container right w-notif m-r-2 m-t-n1-5">     
     <div class="card">
       <ul class="collapsible">
         <li classe="px-1">

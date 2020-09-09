@@ -54,9 +54,13 @@
         text-align: center;
         width: 93%;
       }
+      .pos-btn-100{
+        text-align: center;
+        width: 100%;
+      }
 
       @media screen and (min-width: 601px){
-        .pos-btn{
+        .pos-btn, .post-btn-100{
           text-align: left;
           width: auto;
         }

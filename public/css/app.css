@@ -6518,12 +6518,12 @@ i {
 
 i.left {
   float: left;
-  margin-right: .5rem;
+  margin-right: 15px;
 }
 
 i.right {
   float: right;
-  margin-left: .5rem;
+  margin-left: 15px;
 }
 
 i.tiny {
@@ -18967,10 +18967,6 @@ input[type=range]::-ms-thumb {
   height: 100vh !important;
 }
 
-main {
-  padding-top: 40px;
-}
-
 body {
   background-color: #f1f1ff;
 }
@@ -19024,6 +19020,10 @@ body {
 
 .page-footer {
   margin-top: 80px;
+}
+
+i.left {
+  margin-right: 0.5rem !important;
 }
 
 .cards-container .card {
