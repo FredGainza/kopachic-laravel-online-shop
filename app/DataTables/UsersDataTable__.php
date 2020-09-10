@@ -22,17 +22,12 @@ class UsersDataTable extends DataTable
                 return $user->created_at->format('d/m/Y');
             })
             ->editColumn('principale', function ($user) {
-                $adressPresente = $user->principale;
-                if ($adressPresente == 0){
-                    $addPrincipale = '------  Non Renseignée  -----';
-                } else {
-                    $adress = DB::table('addresses')->find($user->principale);
-                    $pays = DB::table('countries')->find($adress->country_id);
-                    if($adress->professionnal == 0){
-                        $addPrincipale = $adress->civility. ' ' . $adress->firstname. ' ' .strtoupper($adress->name) . ' ' .$adress->address. ($adress->addressbis ? ' '.$adress->addressbis. ' ' : ''). ' - ' .strtoupper($adress->city). ' (' .$pays->name. ')';
-                    }else{
-                        $addPrincipale = strtoupper($adress->company). ' ' .$adress->address. ($adress->addressbis ? ' '.$adress->addressbis. ' ' : ''). ' - ' .strtoupper($adress->city). ' (' .$pays->name. ')';
-                    }
+                $adress = DB::table('addresses')->find($user->principale);
+                $pays = DB::table('countries')->find($adress->country_id);
+                if($adress->professionnal == 0){
+                    $addPrincipale = $adress->civility. ' ' . $adress->firstname. ' ' .strtoupper($adress->name) . ' ' .$adress->address. ($adress->addressbis ? ' '.$adress->addressbis. ' ' : ''). ' - ' .strtoupper($adress->city). ' (' .$pays->name. ')';
+                }else{
+                    $addPrincipale = strtoupper($adress->company). ' ' .$adress->address. ($adress->addressbis ? ' '.$adress->addressbis. ' ' : ''). ' - ' .strtoupper($adress->city). ' (' .$pays->name. ')';
                 }
                 return $addPrincipale; 
             })

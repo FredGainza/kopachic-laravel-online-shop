@@ -10,7 +10,6 @@ abstract class CommonChart extends BaseChart
     {
         $year = request()->year;
         $datas = $this->datas($year, $model);
-        dd('gege');
         return Chartisan::build()
             ->labels($datas->pluck('month_name')->toArray())
             ->dataset($title , $datas->pluck('data')->toArray());
