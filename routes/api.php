@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('create-paypal-transaction', function () {
+    return 'create payment working';
+});
+
+Route::post('authorize-paypal-transaction', function (Request $request) {
+    return 'authorize paypal working';
+});
