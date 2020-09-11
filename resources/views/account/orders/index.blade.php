@@ -15,7 +15,8 @@
                 <th>Prix total</th>
                 <th>Paiement</th>
                 <th>État</th>
-                <th></th>
+                <th>Détails</th>
+                <th>Factures</th>
               </tr>
             </thead>    
             <tbody>
@@ -27,7 +28,7 @@
                 <td>{{ $order->payment_text }}</td>
                 <td><span class="badge new {{ $order->state->color }}" data-badge-caption="{{ $order->state->name }}"></span></td>
                 <td><a href="{{ route('commandes.show', $order->id) }}" class="waves-effect waves-light btn-small">Détails</a></td>
-                @if($order->state->name == 'Paiement accepté')
+                @if($order->state->name == 'Paiement accepté' || $order->state->name == 'Expédié' || $order->state->name == '	Mandat administratif reçu')
                   <td><a href="{{ route('invoice', $order->id) }}" class="waves-effect waves-light btn-small">Télécharger</a></td>
                 @else 
                   <td class="center-align"></td>

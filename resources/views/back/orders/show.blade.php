@@ -40,7 +40,7 @@
               </div>
             @endif
             @if($order->invoice_id)
-              <p>La facture a été générée avec l'id <strong>{{ $order->invoice_id }}</strong> et le numéro <strong>{{ $order->invoice_number }}</strong>.</p>
+              <p>La facture a été générée avec l'id <b>{{ $order->invoice_id }}</b> et le numéro <b>{{ $order->invoice_number }}</b>.</p>
             @else
               <form method="POST" action="{{ route('orders.invoice', $order->id) }}">
                 @csrf
@@ -97,7 +97,7 @@
               <div class="col m6 s12">
                 {{ $item->name }} ({{ $item->quantity }} @if($item->quantity > 1) exemplaires) @else exemplaire) @endif
               </div>
-              <div class="col m6 s12"><strong>{{ number_format($item->total_price_gross, 2, ',', ' ') }} €</strong></div>
+              <div class="col m6 s12"><b>{{ number_format($item->total_price_gross, 2, ',', ' ') }} €</b></div>
             </div>
           @endforeach
           <hr><br>
@@ -106,7 +106,7 @@
               Total HT
             </div>
             <div class="col s6">
-              <strong>{{ number_format($order->ht, 2, ',', ' ') }} €</strong>
+              <b>{{ number_format($order->ht, 2, ',', ' ') }} €</b>
             </div>
           </div>
           <br>
@@ -115,7 +115,7 @@
               Livraison en Colissimo
             </div>
             <div class="col s6">
-              <strong>{{ number_format($order->shipping, 2, ',', ' ') }} €</strong>
+              <b>{{ number_format($order->shipping, 2, ',', ' ') }} €</b>
             </div>
           </div>
           <br>
@@ -125,7 +125,7 @@
                 TVA à {{ $order->tax * 100 }} %
               </div>
               <div class="col s6">
-                <strong>{{ number_format($order->tva, 2, ',', ' ') }} €</strong>
+                <b>{{ number_format($order->tva, 2, ',', ' ') }} €</b>
               </div>
             </div>
             <br>
@@ -135,7 +135,7 @@
               Total TTC
             </div>
             <div class="col s6">
-              <strong>{{ number_format($order->totalOrder, 2, ',', ' ') }} €</strong>
+              <b>{{ number_format($order->totalOrder, 2, ',', ' ') }} €</b>
             </div>
           </div>
         </div>

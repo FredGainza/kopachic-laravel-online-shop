@@ -35,6 +35,10 @@
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
     }
+
+    span.badge{
+      float: none !important;
+    }
   </style>
 @endsection
 
@@ -45,11 +49,11 @@
     <div class="col s12">
       <div class="card">
         <div class="card-content">
-          <p><strong>Commande n° {{ $order->reference }}</strong></p>
+          <p><b>Commande n° {{ $order->reference }}</b></p>
           @if($order->purchase_order)
-            <p><strong>Bon de commande n° {{ $order->purchase_order }}</strong></p>
+            <p><b>Bon de commande n° {{ $order->purchase_order }}</b></p>
           @endif
-          <p><strong>Date :</strong> {{ $order->created_at->calendar() }}</p>
+          <p><b>Date :</b> {{ $order->created_at->calendar() }}</p>
         </div>
       </div>
     </div>
@@ -68,8 +72,9 @@
     <div class="col s12">
       <div class="card">
         <div class="card-content">
-          <p><strong>Moyen de paiement :</strong> {{ $order->payment_text }}</p>
-          <p><strong>Etat : </strong>{{ $order->state->name }}</p>
+          <p><b>Moyen de paiement :</b> {{ $order->payment_text }}</p>
+          <br>
+          <p><b>Etat de la commande: </b><span class="badge new left-align {{ $order->state->color }}" data-badge-caption="{{ $order->state->name }}"></span></p>
           @if($order->state->slug === 'carte' || $order->state->slug === 'erreur')
             @include('command.partials.stripe')
           @endif
