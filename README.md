@@ -9,14 +9,6 @@
 
 [https://kopachic.fgainza.fr](https://kopachic.fgainza.fr)
 
-Use these access codes to test the backend part of the shop (only read bdd axx) :
-
-```
-log: admintest@fgainza.fr
-pwd: 12345678
-```
-
-
 ## Features
 
 **Front-end** :
@@ -42,7 +34,7 @@ PHP 7.4 minimum
 Like any laravel project
 
 ```php
-composer install;
+composer install
 ```
 
 ## Author
